@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.ipa
+*.log
+.DS_Store
+ipa-files/

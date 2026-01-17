@@ -1,0 +1,36 @@
+{
+  "name": "telegram-bot-ipa",
+  "version": "1.0.0",
+  "description": "Telegram bot for downloading, decrypting, and managing iOS IPA files",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ipa",
+    "ios",
+    "decrypt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^4.15.0",
+    "ssh2": "^1.15.0",
+    "ssh2-sftp-client": "^10.0.3",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "telegram": "^2.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ssh2": "^1.11.0",
+    "@types/ssh2-sftp-client": "^9.0.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}

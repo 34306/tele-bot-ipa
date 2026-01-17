@@ -1,0 +1,8 @@
+# Python dependencies for Telegram IPA Bot
+# Used by setup_telegram.py for Telegram session setup
+
+# Telegram client library for Python
+telethon>=1.28.0
+
+# iOS device management libraries
+pymobiledevice3>=2.0.0
