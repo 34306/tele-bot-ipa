@@ -20,9 +20,9 @@ Telegram bot to download, decrypt and manage iOS IPA files via SSH/SFTP.
   - **currently not support Windows**, Linux mayable to run, idk, haven't test on Linux yet... :/
 - PHP 7.4+ with extensions:
   - `curl` extension (usually included)
-  - `redis` extension (optional, for caching)
+  - `redis` extension (optional)
     - macOS: `brew install php-redis`
-- Redis server (optional, for caching) 
+- Redis server (optional) 
     - macOS: `brew install redis` 
 - Python 3.6+ with dependencies: `pip install -r requirements.txt`
 
@@ -72,7 +72,11 @@ REDIS_PASSWORD=
 REDIS_DB=0
 REDIS_TIMEOUT=0.8
 ```
-For the USER_SESSION_STRING, you may need to use the `setup_telegram.py` to get the token, for the BOT token just chat with `@BotFather` in Telegram. For the Telegram API Hash thing just go to [https://my.telegram.org/apps](https://my.telegram.org/apps)
+- For the `USER_SESSION_STRING`, you may need to use the `setup_telegram.py` to get the token
+- For the BOT token just chat with `@BotFather` in Telegram
+- For the Telegram API Hash thing just go to [https://my.telegram.org/apps](https://my.telegram.org/apps)
+- You need to create a file backup channel and fill the channel ID into `BACKUP_CHANNEL_ID` for file saving and forwarding (file size larger than 2GB)
+
 
 5. Build project:
 ```bash
@@ -119,11 +123,12 @@ npm run build
 ## Security
 
 **Warning**: 
-- DONOT upload your `.env` file (contain ALL of your Telegram TOKEN, added in `.ignore` file but just double check)
+- DONOT upload your `.env` file (contain ALL of your Telegram TOKEN, added in `.gitignore` file but just double check)
 - Telegram is allow botuser but be careful with it, just in case...
 
 ## Credits
 
 - [ipatool](https://github.com/majd/ipatool) - Tool to download IPA from App Store
 - [TrollDecryptJB](https://github.com/34306/TrollDecryptJB/releases/tag/1.3.1.1) - Tool to decrypt iOS apps (CLI available at `/usr/local/bin/trolldecryptjb`)
-- [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller) - [ipa-bot](https://github.com/Geczy/ipa-bot)
+- [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller)
+- [ipa-bot](https://github.com/Geczy/ipa-bot)
